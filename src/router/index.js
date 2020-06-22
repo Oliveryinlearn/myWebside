@@ -4,11 +4,39 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-  const routes = [
+export const children = [
+    {
+      path: "/webview",
+      name: "WebView",
+      component: () => import('../views/WebView.vue')
+    },
+    {
+      path:"/works",
+      name: "Works",
+      component: () => import('../views/Works.vue')
+    },
+    {
+      path:"/resume",
+      name: "Resume",
+      component: () => import('../views/Resume.vue')
+    }
+]
+
+const otherChildren = [
+  {
+    path: "/detail/:id",
+    name: "Detail",
+    component: () => import('../views/works/WorksDetail.vue')
+  }
+]
+
+const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    redirect: "/webview",
+    children:[...children, ...otherChildren]
   }
 ]
 // component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
