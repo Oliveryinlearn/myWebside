@@ -1,8 +1,11 @@
 <template>
     <div class="webview">
         <div class="webview-body clearfix">
-            <div class="left" id="webViewLeft">
-                <quick-search v-for="(items,index) in msg" :key="index" :moduleNav="items"></quick-search>
+            <div class="left" ref="webViewLeft">
+                <div>
+                    <quick-search v-for="(items,index) in msg" :key="index" :moduleNav="items"></quick-search>
+                </div>
+                
             </div>
             <div class="right" :style="{'right':rightComputed}">
                 <ul>
@@ -15,6 +18,7 @@
 
 <script>
     import QuickSearch from "@/views/webview/QuickSearch.vue";
+
     export default {
         name: "WebView",
         data(){
@@ -32,16 +36,12 @@
             }).catch((err)=>{
                 console.log(err);
             })
-
+            
             this.fontSizeComputed();
         },
         mounted(){
             window.onresize = () => {
                 this.fontSizeComputed();
-            }
-
-            document.onscroll = () => {
-                // console.log(document.documentElement.scrollTop)
             }
         },
         methods:{

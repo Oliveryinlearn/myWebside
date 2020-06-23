@@ -16,7 +16,7 @@ export default {
     return {
       title: [
         {
-            name: "网站导航"
+            name: "我的导航"
         },
 
         {
