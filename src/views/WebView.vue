@@ -31,7 +31,7 @@
             QuickSearch
         },
         created(){
-            this.$axios.get("/webviewData.json").then((res) => {
+            this.$axios.get("/webViewData.json").then((res) => {
                 this.msg = res.data;
             }).catch((err)=>{
                 console.log(err);
