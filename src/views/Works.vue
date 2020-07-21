@@ -14,8 +14,7 @@
         name: "Works",
         components:{
             IntroductionView,
-            WorkPreview,
-            
+            WorkPreview
         },
         computed:{
             worklist(){

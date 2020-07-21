@@ -1,5 +1,5 @@
 <template>
-    <div class="works">
+    <div class="works clearfix">
         <ul class='clearfix' :style="{'width':widthComputedNum}">
             <li v-for='item in workslist' :data-id='item.dataId' :key='item.dataId' @click="updataDetail(item)">
                 <router-link v-bind:to='"/detail/"+item.dataId'>
@@ -64,10 +64,10 @@
             this.widthComputed(document.body.clientWidth);
         },
         mounted(){
-            window.onresize = () => {
+            window.addEventListener('resize', () => {
                 this.fontSizeComputed();
                 this.widthComputed(document.body.clientWidth);
-            }
+            }, false)
         }
     };
 </script>
@@ -76,18 +76,16 @@
 @import "@/style/color.scss";
 .works{
     width: 100%;
-    min-height: 50rem;
-    padding-top: 2rem;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
     box-sizing: border-box;
+    min-height: 60rem;
     position: relative;
+    display: flex;
     background: $default_background;
+    // align-items: center;
+    justify-content: center;
     ul{
-        // max-width: 92.5rem;
-        // width: 74rem;
-        // margin: 0 auto;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
         a{
             text-decoration: none;
         }

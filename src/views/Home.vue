@@ -3,7 +3,7 @@
     <header-view></header-view>
 
     <transition name="an" mode="out-in">
-      <router-view :style="{'minHeight':minHeight}"></router-view>
+      <router-view ></router-view>
     </transition>
 
     <footer-view></footer-view>
