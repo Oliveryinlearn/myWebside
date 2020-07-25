@@ -16,9 +16,15 @@
                 "url":"https://lanhuapp.com/"
             },
             {
+                "name":"有道翻译",
+                "img":"youdao.png",
+                "content":"翻译技术文章文字比较准",
+                "url":"http://fanyi.youdao.com/"
+            },
+            {
                 "name":"百度翻译",
                 "img":"baidufanyi.png",
-                "content":"百度翻译致力于帮助用户跨越语言鸿沟",
+                "content":"翻译日常办公文档比较准",
                 "url":"https://fanyi.baidu.com/?aldtype=16047#auto/zh"
             },
             {
@@ -38,6 +44,12 @@
                 "img":"yuque.png",
                 "content":"优雅高效的在线文档编辑与协同工具",
                 "url":"https://www.yuque.com/dashboard"
+            },
+            {
+                "name":"阿里云",
+                "img":"aliyun.png",
+                "content":"寄托与云端的服务器以及域名相关操作",
+                "url":"https://www.aliyun.com/"
             }
         ]
     },
